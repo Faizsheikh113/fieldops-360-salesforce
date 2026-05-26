@@ -71,3 +71,92 @@ and customer 360 visibility — all built natively on Salesforce.
 ---
 
 ## 🗂️ Project Structure
+
+FieldOps360/
+├── force-app/
+│   └── main/
+│       └── default/
+│           ├── classes/
+│           │   ├── FieldOpsController.cls
+│           │   ├── FieldOpsController_Test.cls
+│           │   ├── FieldOpsTriggerHandler.cls
+│           │   └── FieldOpsBatchJob.cls
+│           ├── triggers/
+│           │   ├── OpportunityTrigger.trigger
+│           │   └── ServiceAppointmentTrigger.trigger
+│           ├── lwc/
+│           │   ├── salesPipelineDashboard/
+│           │   ├── fieldServiceMap/
+│           │   └── customer360View/
+│           └── flows/
+│               ├── LeadFollowUpReminder.flow
+│               └── ServiceJobAssignment.flow
+├── config/
+│   └── project-scratch-def.json
+└── sfdx-project.json
+
+---
+
+## 🚀 Deployment Guide
+
+### Prerequisites
+- Salesforce CLI installed
+- Developer org or Sandbox access
+
+### Steps
+
+```bash
+# Step 1 — Authenticate to Salesforce org
+sfdx force:auth:web:login -a FieldOps360Org
+
+# Step 2 — Create scratch org
+sfdx force:org:create -f config/project-scratch-def.json -a FieldOps360 -d 30
+
+# Step 3 — Push source to scratch org
+sfdx force:source:push -u FieldOps360
+
+# Step 4 — Run all test classes
+sfdx force:apex:test:run -u FieldOps360 --code-coverage
+
+# Step 5 — Open the org
+sfdx force:org:open -u FieldOps360
+```
+
+---
+
+## 📊 Development Status
+
+| Module | Status | Code Coverage |
+|---|---|---|
+| Project Setup & Data Modelling | ✅ Complete | - |
+| Apex Triggers & Test Classes | ✅ Complete | 90%+ |
+| Sales Pipeline LWC | 🔄 In Progress | - |
+| Field Service Module | 🔄 In Progress | - |
+| Customer 360 Integration | ⬜ Planned | - |
+| REST API Layer | ⬜ Planned | - |
+
+---
+
+## 🏆 Key Salesforce Concepts Demonstrated
+
+- ✅ Apex Trigger best practices (one trigger per object)
+- ✅ Trigger Handler pattern for clean separation of logic
+- ✅ Batch Apex for large data volume processing
+- ✅ Mock Test Classes with 90%+ code coverage
+- ✅ LWC component lifecycle and wire adapters
+- ✅ SOQL query optimisation (no SOQL in loops)
+- ✅ Flow Builder for declarative automation
+- ✅ Salesforce DX project structure & deployment
+
+---
+
+## 👨‍💻 Author
+
+**Faiz Sheikh**
+Salesforce Certified Platform Developer I & Administrator
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/faizsheikh113)
+[![Trailhead](https://img.shields.io/badge/Trailhead-00A1E0?style=flat&logo=salesforce&logoColor=white)](https://salesforce.com/trailblazer/uyxif8ind5vuhely5f)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Faizsheikh113)
+
+📧 faizsheikh113@gmail.com
