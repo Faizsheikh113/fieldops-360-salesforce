@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Battery System</fullName>
+                <default>false</default>
+                <label>Battery System</label>
+            </value>
+            <value>
+                <fullName>Boiler</fullName>
+                <default>false</default>
+                <label>Boiler</label>
+            </value>
+            <value>
+                <fullName>CNC Machine</fullName>
+                <default>false</default>
+                <label>CNC Machine</label>
+            </value>
+            <value>
+                <fullName>Compressor</fullName>
+                <default>false</default>
+                <label>Compressor</label>
+            </value>
+            <value>
+                <fullName>Control Panel</fullName>
+                <default>false</default>
+                <label>Control Panel</label>
+            </value>
+            <value>
+                <fullName>Conveyor System</fullName>
+                <default>false</default>
+                <label>Conveyor System</label>
+            </value>
+            <value>
+                <fullName>Cooling System</fullName>
+                <default>false</default>
+                <label>Cooling System</label>
+            </value>
+            <value>
+                <fullName>Generator</fullName>
+                <default>false</default>
+                <label>Generator</label>
+            </value>
+            <value>
+                <fullName>HVAC Unit</fullName>
+                <default>false</default>
+                <label>HVAC Unit</label>
+            </value>
+            <value>
+                <fullName>Motor</fullName>
+                <default>false</default>
+                <label>Motor</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Packaging Machine</fullName>
+                <default>false</default>
+                <label>Packaging Machine</label>
+            </value>
+            <value>
+                <fullName>Printing Machine</fullName>
+                <default>false</default>
+                <label>Printing Machine</label>
+            </value>
+            <value>
+                <fullName>Pump</fullName>
+                <default>false</default>
+                <label>Pump</label>
+            </value>
+            <value>
+                <fullName>Solar Inverter</fullName>
+                <default>false</default>
+                <label>Solar Inverter</label>
+            </value>
+            <value>
+                <fullName>Transformer</fullName>
+                <default>false</default>
+                <label>Transformer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

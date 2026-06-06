@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Priority_Tickets_Need_Description</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   ISPICKVAL(Priority__c, &quot;High&quot;),
+   ISBLANK(Description__c)
+)</errorConditionFormula>
+    <errorMessage>Please fill in the description for High Priority Tickets.</errorMessage>
+</ValidationRule>
